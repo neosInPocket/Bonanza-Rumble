@@ -25,6 +25,13 @@ public class ObjectSpawner : MonoBehaviour
 		mainPlatform = spawnPlatform;
 	}
 	
+	public void Initialize()
+	{
+		lastPlatform = secondPlatform;
+		prevPlatform = firstPlatform;
+		mainPlatform = spawnPlatform;
+	}
+	
 	private void Update()
 	{
 		if (player.transform.position.y > mainPlatform.transform.position.y)

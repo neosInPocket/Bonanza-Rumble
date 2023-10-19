@@ -34,6 +34,7 @@ Transform:
   m_Children:
   - {fileID: 1864235498876172700}
   - {fileID: 4780418734560417003}
+  - {fileID: 1932197606529702018}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5542740173128146438
@@ -137,6 +138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spikes: {fileID: 8195145671455027846}
   coin: {fileID: 3420353318071372501}
+  playerSpawnPoint: {fileID: 1932197606529702018}
+  isSpawnPlatform: 0
+  hasSpikes: 0
 --- !u!1 &3420353318071372501
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +275,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 1707519472764412, guid: 13cab4bd6d9c07441af37117a34f9a44, type: 3}
+--- !u!1 &7903489958910114205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1932197606529702018}
+  m_Layer: 0
+  m_Name: PlayerSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1932197606529702018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7903489958910114205}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1600131751931752652}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8195145671455027846
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4780418734560417003}
   - component: {fileID: 5658410161849405764}
-  - component: {fileID: 2676262952457158931}
+  - component: {fileID: 786259017488752981}
   - component: {fileID: 5790570938502224141}
   m_Layer: 0
   m_Name: Spikes
@@ -357,8 +392,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2676262952457158931
-BoxCollider2D:
+--- !u!70 &786259017488752981
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -389,19 +424,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.0700002, y: 0.41373047}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.0700002, y: 0.41373047}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.022158505, y: 0.0000000026414995}
+  m_Size: {x: 2.7597907, y: 0.41373375}
+  m_Direction: 1
 --- !u!114 &5790570938502224141
 MonoBehaviour:
   m_ObjectHideFlags: 0

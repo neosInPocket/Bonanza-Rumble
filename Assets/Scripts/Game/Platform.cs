@@ -8,9 +8,15 @@ public class Platform : MonoBehaviour
 {
 	[SerializeField] private GameObject spikes;
 	[SerializeField] private GameObject coin;
+	[SerializeField] private Transform playerSpawnPoint;
+	[SerializeField] private bool isSpawnPlatform;
+	public Transform PlayerSpawnPoint => playerSpawnPoint;
+	public bool hasSpikes;
 	
 	private void Start()
 	{
+		if (isSpawnPlatform) return;
+		
 		var isSpawnSpikes = SpawnSpikes();
 		
 		if (isSpawnSpikes == true)
@@ -30,6 +36,7 @@ public class Platform : MonoBehaviour
 		}
 		else
 		{
+			hasSpikes = true;
 			return true;
 		}
 	}

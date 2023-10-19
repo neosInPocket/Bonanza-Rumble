@@ -14,9 +14,10 @@ public class CameraBehaviour : MonoBehaviour
 	[SerializeField] private float delta;
 	[SerializeField] private float offset;
 	
+	
 	private void Update()
 	{
-		if (cameraPosition.transform.position.y > player.transform.position.y)  return;
+		if (Mathf.Abs(cameraPosition.transform.position.y - player.transform.position.y) < delta) return;
 		
 		transform.position = new Vector3(transform.position.x, transform.position.y + CalculateSpeed() * Time.deltaTime, transform.position.z);
 	}
@@ -28,5 +29,10 @@ public class CameraBehaviour : MonoBehaviour
 		var newDistance = distance;
 		
 		return amplitude * direction * Mathf.Abs(newDistance);
+	}
+	
+	public void UpdatePosition()
+	{
+		transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
 	}
 }

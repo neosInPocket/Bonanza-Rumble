@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1708747869826032959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622217158586622716}
+  m_Layer: 0
+  m_Name: PlayerSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1622217158586622716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708747869826032959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 434417847355089528}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3150548386680491876
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3103874360679195751}
   - component: {fileID: 2530234605541156766}
-  - component: {fileID: 5532051326864857569}
+  - component: {fileID: 352082532939966625}
   - component: {fileID: 7454380892350964230}
   m_Layer: 0
   m_Name: Spikes
@@ -220,8 +251,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5532051326864857569
-BoxCollider2D:
+--- !u!70 &352082532939966625
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -249,22 +280,12 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.0700002, y: 0.41373047}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.0700002, y: 0.41373047}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.046223406, y: 0.000000005510259}
+  m_Size: {x: 2.6661713, y: 0.41373453}
+  m_Direction: 1
 --- !u!114 &7454380892350964230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +332,7 @@ Transform:
   m_Children:
   - {fileID: 1883409804449705293}
   - {fileID: 3103874360679195751}
+  - {fileID: 1622217158586622716}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1913925137104162522
@@ -414,3 +436,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spikes: {fileID: 3671797673359912086}
   coin: {fileID: 3150548386680491876}
+  playerSpawnPoint: {fileID: 0}
+  isSpawnPlatform: 0
+  hasSpikes: 0

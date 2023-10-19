@@ -31,6 +31,9 @@ public class Attractor : MonoBehaviour
 	{
 		if (collider.TryGetComponent<PlayerController>(out PlayerController player))
 		{
+			if (isDead) return;
+			isDead = true;
+			
 			isInitialized = false;
 			attracted.gravityScale = 1;
 			attracted.totalForce = Vector2.zero;
