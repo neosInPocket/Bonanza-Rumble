@@ -17,6 +17,7 @@ public class Attractor : MonoBehaviour
 		attracted = rigidbody;
 		attracted.gravityScale = 0;
 		isInitialized = true;	
+		StartCoroutine(WaitFor3Seconds());
 	}
 	
 	private void Update()
@@ -59,6 +60,7 @@ public class Attractor : MonoBehaviour
 	{
 		spriteRenderer.color = new Color(0, 0, 0, 0);
 		var effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+		attracted.gameObject.GetComponent<PlayerController>().isSpawned = false;
 		yield return new WaitForSeconds(1f);
 		Destroy(effect);
 		Destroy(gameObject);
@@ -71,5 +73,14 @@ public class Attractor : MonoBehaviour
 			particleSystem.Stop();
 			particleSystem.Clear();
 		}
+	}
+	
+	private IEnumerator WaitFor3Seconds()
+	{
+		yield return new WaitForSeconds(2.5f);
+		if (isDead) yield break;
+		attracted.totalForce = Vector2.zero;
+		attracted.gravityScale = 1;
+		Kill();
 	}
 }

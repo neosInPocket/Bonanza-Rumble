@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BorderPlatforms : MonoBehaviour
 {
+	[SerializeField] private PlayerController player;
 	[SerializeField] private BoxCollider2D left;
 	[SerializeField] private SpriteRenderer leftRenderer;
 	[SerializeField] private SpriteRenderer rightRenderer;
@@ -18,5 +19,11 @@ public class BorderPlatforms : MonoBehaviour
 		
 		left.size = new Vector2(left.size.x, screenBounds.y * 2);
 		right.size = new Vector2(right.size.x, screenBounds.y * 2);
+	}
+	
+	private void Update()
+	{
+		left.transform.position = new Vector2(left.transform.position.x, player.transform.position.y);
+		right.transform.position = new Vector2(right.transform.position.x, player.transform.position.y);
 	}
 }
