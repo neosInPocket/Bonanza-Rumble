@@ -436,6 +436,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spikes: {fileID: 3671797673359912086}
   coin: {fileID: 3150548386680491876}
-  playerSpawnPoint: {fileID: 0}
+  playerSpawnPoint: {fileID: 1622217158586622716}
   isSpawnPlatform: 0
   hasSpikes: 0

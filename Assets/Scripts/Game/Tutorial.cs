@@ -21,6 +21,9 @@ public class Tutorial : MonoBehaviour
 	
 	public void Play()
 	{
+		EnhancedTouchSupport.Enable();
+		TouchSimulation.Enable();
+		
 		mainContainer.SetActive(true);
 		text.text = "Welcome to Candy Magnetics!";
 		Touch.onFingerDown += Phrase1;

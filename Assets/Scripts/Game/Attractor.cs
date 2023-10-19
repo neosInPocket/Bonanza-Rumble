@@ -12,10 +12,13 @@ public class Attractor : MonoBehaviour
 	private bool isInitialized;
 	private Rigidbody2D attracted;
 	private bool isDead;
+	private int[] chargeValues = { 13, 17, 21, 25 }; 
 	public void Initialize(Rigidbody2D rigidbody)
 	{
+		charge = chargeValues[SaveSystem.AttractionUpgrade];
 		attracted = rigidbody;
 		attracted.gravityScale = 0;
+		attracted.totalForce = Vector2.zero;
 		isInitialized = true;	
 		StartCoroutine(WaitFor3Seconds());
 	}
@@ -32,8 +35,6 @@ public class Attractor : MonoBehaviour
 		if (collider.TryGetComponent<PlayerController>(out PlayerController player))
 		{
 			if (isDead) return;
-			isDead = true;
-			
 			isInitialized = false;
 			attracted.gravityScale = 1;
 			attracted.totalForce = Vector2.zero;
@@ -82,6 +83,7 @@ public class Attractor : MonoBehaviour
 	{
 		yield return new WaitForSeconds(2.5f);
 		if (isDead) yield break;
+		isDead = true;
 		attracted.totalForce = Vector2.zero;
 		attracted.gravityScale = 1;
 		Kill();

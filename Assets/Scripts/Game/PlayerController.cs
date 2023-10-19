@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 	public Action CoinCollected;
 	public Action SpikesCollision;
 	private Transform currentSafePlatform;
+	public Attractor currentAttractor;
 	
 	private void Start()
 	{
@@ -30,8 +31,8 @@ public class PlayerController : MonoBehaviour
 		isSpawned = true;
 		
 		var worldPosition = Camera.main.ScreenToWorldPoint(finger.screenPosition);
-		var attractor = Instantiate(attractorPrefab, worldPosition, Quaternion.identity, attractorContainer);
-		attractor.Initialize(rb);
+		currentAttractor = Instantiate(attractorPrefab, worldPosition, Quaternion.identity, attractorContainer);
+		currentAttractor.Initialize(rb);
 	}
 	
 	private void OnTriggerEnter2D(Collider2D collider)
@@ -74,8 +75,8 @@ public class PlayerController : MonoBehaviour
 	{
 		for (int i = 0; i < 6; i++)
 		{
-			spriteRenderer.color = new Color(1, 1, 1, 0);
-			yield return new WaitForSeconds(0.3f);
+			spriteRenderer.color = new Color(1, 1, 1, 0.3f);
+			yield return new WaitForSeconds(0.1f);
 			spriteRenderer.color = new Color(1, 1, 1, 1);
 			yield return new WaitForSeconds(0.3f);
 		}
@@ -100,6 +101,7 @@ public class PlayerController : MonoBehaviour
 	
 	public void ReturnToSpawn()
 	{
+		isSpawned = false;
 		transform.position = spawnPlatform.GetComponent<Platform>().PlayerSpawnPoint.position;
 		cameraBehaviour.UpdatePosition();
 		rb.velocity = Vector2.zero;

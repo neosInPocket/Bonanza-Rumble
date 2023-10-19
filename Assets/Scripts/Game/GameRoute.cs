@@ -35,7 +35,6 @@ public class GameRoute : MonoBehaviour
 		objectSpawner.Initialize();
 		gameResultScreen.Hide();
 		SaveSystem.Load();
-		SaveSystem.IsFirstGameTime = "yes";
 		DestroyObjects();
 		player.ReturnToSpawn();
 		
@@ -44,8 +43,13 @@ public class GameRoute : MonoBehaviour
 		currentMaxPoints = GetLevelMaxPoints();
 		currentLevelCoins = GetLevelCoins();
 		
+		levelCaption.text = "Level " + SaveSystem.Level;
+		RefreshUI();
+		
 		if (SaveSystem.IsFirstGameTime == "yes")
 		{
+			SaveSystem.IsFirstGameTime = "no";
+			SaveSystem.Save();
 			tutorial.TutorialEnd += OnTutorialEnd;
 			tutorial.Play();
 		}
@@ -53,9 +57,6 @@ public class GameRoute : MonoBehaviour
 		{
 			PlayCountDown();
 		}
-		
-		levelCaption.text = "Level " + SaveSystem.Level;
-		RefreshUI();
 	}
 	
 	private void OnTutorialEnd()
@@ -125,7 +126,7 @@ public class GameRoute : MonoBehaviour
 	private int GetLevelMaxPoints()
 	{
 		var level = SaveSystem.Level;
-		return (int)(Mathf.Pow(level, 1/4) * Mathf.Log(level) + 5);
+		return (int)(level * Mathf.Log(level) + 5);
 	}
 	
 	private int GetLevelCoins()

@@ -8,6 +8,7 @@ public static class SaveSystem
 	public static int Coins;
 	public static int LifesUpgrade;
 	public static int AttractionUpgrade;
+	public static float MusicVolume;
 	public static string IsFirstGameTime;
 	
 	public static void Save()
@@ -16,6 +17,7 @@ public static class SaveSystem
 		PlayerPrefs.SetInt("Level", Level);
 		PlayerPrefs.SetInt("LifesUpgrade", LifesUpgrade);
 		PlayerPrefs.SetInt("AttractionUpgrade", AttractionUpgrade);
+		PlayerPrefs.SetFloat("MusicVolume", MusicVolume);
 		PlayerPrefs.SetString("IsFirstGameTime", IsFirstGameTime);
 	}
 	
@@ -26,5 +28,6 @@ public static class SaveSystem
 		LifesUpgrade = PlayerPrefs.GetInt("LifesUpgrade", 1);
 		AttractionUpgrade = PlayerPrefs.GetInt("AttractionUpgrade", 0);
 		IsFirstGameTime = PlayerPrefs.GetString("IsFirstGameTime", "yes");
+		MusicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
 	}
 }
