@@ -25,7 +25,7 @@ public class Tutorial : MonoBehaviour
 		TouchSimulation.Enable();
 		
 		mainContainer.SetActive(true);
-		text.text = "Welcome to Candy Magnetics!";
+		text.text = "Welcome to Bonanza Rumble!";
 		Touch.onFingerDown += Phrase1;
 	}
 	

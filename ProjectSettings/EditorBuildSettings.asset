@@ -11,4 +11,64 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/RumbleController.unity
+    guid: 54c404c79a990a849a219e46326b5c09
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 1.unity
+    guid: 3e0ab2da4b8089b44b16a03cd75a3660
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 2.unity
+    guid: 6fb9f3936b72f0240a1f8fc85a7b8afd
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 3.unity
+    guid: 8af7ade1d6056e946b5ee6d57fa7c8ea
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 4.unity
+    guid: c4a0115b5afe8414d9c43c3203054ddb
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 5.unity
+    guid: 84656f58b9cd4f9469c146dab5c7e736
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 6.unity
+    guid: 96d20bcfd8902874e834441dc57c6e26
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 7.unity
+    guid: b5582a390de814641a10c9fd52ead83a
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 8.unity
+    guid: b36e3ac3f71eec54a842b21d72fe8b07
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 9.unity
+    guid: ec873e3e434ce9c4492f3cf59c0fd93a
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 10.unity
+    guid: b61ae3e7f4201324da50479985a81fd9
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 11.unity
+    guid: d37410eb9450c804fb504424b925a977
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 12.unity
+    guid: 31215df099b3b86418dceaa42dc8c2a1
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 13.unity
+    guid: 31c074eeb19b99f4c82cbf1fbc9c1438
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 14.unity
+    guid: babd25dc73937264483db7dfe9366b4f
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 15.unity
+    guid: 48bd4866dccacf34696306915701198b
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 16.unity
+    guid: 03479b000458a3848a144fed342330ba
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 17.unity
+    guid: 1a5884f535c6134429faa5e33c1d2955
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 18.unity
+    guid: 335f99b9af7f0364b820ce630e8beddb
+  - enabled: 1
+    path: Assets/Scenes/RumbleController 19.unity
+    guid: a7682675b576fec41abbb5b6c18633f1
   m_configObjects: {}

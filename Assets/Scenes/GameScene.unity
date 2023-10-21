@@ -285,8 +285,8 @@ Transform:
   m_GameObject: {fileID: 132016720}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.0274, z: -0.054218926}
-  m_LocalScale: {x: 1.4175, y: 1.3748031, z: 1}
+  m_LocalPosition: {x: -0.1523, y: -2.0274, z: -0.054218926}
+  m_LocalScale: {x: 1.4936197, y: 1.3748031, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1174864315}
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.1
+  m_fontSize: 59.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -972,10 +972,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1414198791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60.00001, y: -65.16929}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 114.148674, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397322083
 MonoBehaviour:
@@ -1062,10 +1062,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1414198791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300.00006, y: -65.16929}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 114.148674, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407242013
 MonoBehaviour:
@@ -1824,10 +1824,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1414198791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180.00003, y: -65.16929}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 114.148674, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &961509887
 MonoBehaviour:
@@ -3135,6 +3135,7 @@ MonoBehaviour:
   spawnPlatform: {fileID: 132016721}
   cameraBehaviour: {fileID: 519420033}
   isSpawned: 0
+  currentAttractor: {fileID: 0}
 --- !u!1 &1375504201
 GameObject:
   m_ObjectHideFlags: 0
@@ -3350,7 +3351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 4
-  m_AspectRatio: 0.5
+  m_AspectRatio: 0.46191406
 --- !u!114 &1545024943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3559,7 +3560,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.125}
   m_AnchorMax: {x: 1, y: 0.9492998}
   m_AnchoredPosition: {x: 0, y: -0.00012207031}
-  m_SizeDelta: {x: -56.297607, y: 0}
+  m_SizeDelta: {x: -24.464478, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1569850702
 MonoBehaviour:
@@ -3574,7 +3575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 2
-  m_AspectRatio: 0.77894735
+  m_AspectRatio: 1
 --- !u!114 &1569850703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4470,7 +4471,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 97.64
+  m_fontSize: 82
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
