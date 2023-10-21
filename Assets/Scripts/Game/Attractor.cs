@@ -12,7 +12,7 @@ public class Attractor : MonoBehaviour
 	private bool isInitialized;
 	private Rigidbody2D attracted;
 	private bool isDead;
-	private int[] chargeValues = { 13, 17, 21, 25 }; 
+	private int[] chargeValues = { 170, 210, 260, 300 }; 
 	public void Initialize(Rigidbody2D rigidbody)
 	{
 		charge = chargeValues[SaveSystem.AttractionUpgrade];
@@ -49,7 +49,7 @@ public class Attractor : MonoBehaviour
 		var direction = difference.normalized;
 		var force = Mathf.Pow(charge, 2) / Mathf.Pow(distance, 2);
 		
-		return force * direction;
+		return force * direction * Time.deltaTime;
 	}
 	
 	private void Kill()
@@ -83,7 +83,6 @@ public class Attractor : MonoBehaviour
 	{
 		yield return new WaitForSeconds(2.5f);
 		if (isDead) yield break;
-		isDead = true;
 		attracted.totalForce = Vector2.zero;
 		attracted.gravityScale = 1;
 		Kill();
